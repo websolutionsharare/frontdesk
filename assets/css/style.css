@@ -1,0 +1,250 @@
+/* resets */
+@media screen {
+	.bg-1 {
+		background: rgba(0, 0, 0, 0.196);
+	}
+	a {
+		color: rgb(80, 229, 135);
+		text-decoration: none;
+	}
+}
+/* general */
+@media screen {
+	::-webkit-scrollbar {
+		width: 10px;
+		height: 8px;
+	}
+	::-webkit-scrollbar-track {
+		background-color: rgb(52, 2, 58);
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: rgb(168, 165, 179);
+		border: solid rgb(40, 8, 28);
+		border-radius: 10px;
+	}
+	.back-to-top {
+		position: fixed;
+		visibility: hidden;
+		opacity: 0;
+		right: 15px;
+		bottom: 15px;
+		z-index: 996;
+		background: rgba(0, 0, 0, 0.5);
+		width: 40px;
+		height: 40px;
+		border-radius: 50px;
+		transition: all 0.4s;
+	}
+	.back-to-top i {
+		font-size: 28px;
+		color: #fff;
+		line-height: 0;
+	}
+	.back-to-top:hover {
+		background: rgba(0, 0, 0, 0.2);
+	}
+	.back-to-top.active {
+		visibility: visible;
+		opacity: 1;
+	}
+	header {
+		transition: all 0.2s linear;
+		background-color: rgba(0, 0, 0, 0.196);
+	}
+}
+/* background */
+@media screen {
+	@keyframes rotateRcreen {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	.background {
+		position: fixed;
+		top: -100%;
+		bottom: -100%;
+		right: -50%;
+		left: -50%;
+		animation: rotateRcreen 5s linear infinite;
+		background: linear-gradient(to top left, rgb(34, 2, 58), rgb(40, 8, 28));
+		z-index: 0;
+	}
+	.content {
+		position: relative;
+		z-index: 1;
+		color: rgb(168, 165, 179) !important;
+	}
+	@media screen and (max-width: 500px) {
+		.background {
+			top: -500%;
+			bottom: -500%;
+			right: -1000%;
+			left: -1000%;
+		}
+	}
+}
+
+/* custom util classes */
+@media screen {
+	.text-custom-1 {
+		color: rgb(80, 229, 135) !important;
+	}
+	.text-inherit {
+		color: inherit !important;
+	}
+	.object-fit-cover {
+		object-fit: cover;
+	}
+	.c-rounded-1 {
+		border-radius: 10px;
+	}
+	.c-rounded-2 {
+		border-radius: 20px;
+	}
+	.c-rounded-3 {
+		border-radius: 30px;
+	}
+	.w-fit {
+		width: fit-content;
+	}
+	.h-fit {
+		height: fit-content;
+	}
+	.cursor {
+		cursor: pointer;
+	}
+	.text-ellipsis {
+		text-overflow: ellipsis;
+	}
+	.text-inherit {
+		color: inherit !important;
+	}
+}
+
+/* mobile-nav */
+@media screen {
+	#mobile-nav {
+		position: fixed;
+		z-index: 100000;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: rgba(0, 0, 0, 0.9);
+		opacity: 0;
+		transition: all 0.3s;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transform: translateY(100%);
+	}
+	#mobile-nav.open-nav {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	#mobile-nav button {
+		color: white !important;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	#mobile-nav a {
+		color: white;
+		padding: 0.3rem;
+	}
+}
+
+/* everything else */
+@media screen {
+	.primary-btn {
+		color: rgb(80, 229, 135) !important;
+		font-size: 90%;
+		cursor: pointer;
+		text-transform: uppercase;
+		padding: 0.5rem 1rem;
+		position: relative;
+		border-radius: 0.2rem;
+		transition: all 0.2s linear;
+	}
+	.primary-btn:hover::after {
+		width: 100%;
+	}
+	.primary-btn:hover::before {
+		width: 100%;
+	}
+	.primary-btn::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 100%;
+		width: 0.6rem;
+		transition: all 0.2s linear;
+		border-top: solid 1px rgb(80, 229, 135);
+		border-bottom: solid 1px rgb(80, 229, 135);
+		border-left: solid 1px rgb(80, 229, 135);
+	}
+	.primary-btn::before {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 0.6rem;
+		transition: all 0.2s linear;
+		border-top: solid 1px rgb(80, 229, 135);
+		border-bottom: solid 1px rgb(80, 229, 135);
+		border-right: solid 1px rgb(80, 229, 135);
+	}
+
+	#logo {
+		color: inherit !important;
+		font-size: 25px;
+	}
+	#logo i {
+		color: rgb(80, 229, 135);
+	}
+	section {
+		min-height: 50vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#hero {
+		min-height: 60vh;
+	}
+	section > div:first-of-type {
+		width: 100%;
+	}
+	#offerings .offering {
+		height: 100%;
+		padding: 2rem;
+		border-radius: 10px;
+		background-color: rgba(0, 0, 0, 0.196);
+	}
+	.border-custom-1 {
+		border-color: rgba(0, 0, 0, 0.196) !important;
+	}
+}
+
+#hero .bi-stars {
+	color: white;
+	animation: twinkle 3s linear none infinite alternate;
+}
+#hero .bi-code-slash {
+	color: rgb(80, 229, 135);
+	animation: twinkle 3s linear none infinite alternate-reverse;
+}
+
+@keyframes twinkle {
+	from {
+		color: white;
+	}
+	to {
+		color: rgb(80, 229, 135);
+	}
+}
