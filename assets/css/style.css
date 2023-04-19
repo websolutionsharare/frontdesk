@@ -233,11 +233,11 @@
 
 #hero .bi-stars {
 	color: white;
-	animation: twinkle 3s linear none infinite alternate;
+	/* animation: twinkle 3s linear none infinite alternate; */
 }
 #hero .bi-code-slash {
 	color: rgb(80, 229, 135);
-	animation: twinkle 3s linear none infinite alternate-reverse;
+	/* animation: twinkle 3s linear none infinite alternate-reverse; */
 }
 
 @keyframes twinkle {
